@@ -14,6 +14,11 @@ defmodule MyBlogWeb.PostController do
     render(conn, "new.html", changeset: changeset)
   end
 
+  # something like this if there's no body/params provided
+  # def create(conn, %{"post" => nil}) do
+  #   render(conn, "new.html", changeset: changeset)      ??? maybe
+  # end
+
   def create(conn, %{"post" => post_params}) do
     case Blog.create_post(post_params) do
       {:ok, post} ->
