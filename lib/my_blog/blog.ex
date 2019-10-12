@@ -51,7 +51,9 @@ defmodule MyBlog.Blog do
   """
   def create_post(attrs \\ %{}) do
     %Post{}
+    # changeset is like a diff of what needs to be changed
     |> Post.changeset(attrs)
+    # insert is like calling new + save in ActiveRecord
     |> Repo.insert()
   end
 

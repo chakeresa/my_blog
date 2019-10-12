@@ -1,6 +1,7 @@
 defmodule MyBlogWeb.Router do
   use MyBlogWeb, :router
 
+  # everything in this pipeline runs before each :browser request is processed
   pipeline :browser do
     plug :accepts, ["html"]
     plug :fetch_session
@@ -22,6 +23,7 @@ defmodule MyBlogWeb.Router do
   end
 
   # Other scopes may use custom stacks.
+  # note: scope "/" would work too
   # scope "/api", MyBlogWeb do
   #   pipe_through :api
   # end
