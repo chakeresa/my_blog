@@ -2,8 +2,8 @@ use Mix.Config
 
 # Configure your database
 config :my_blog, MyBlog.Repo,
-  username: "postgres",
-  password: "postgres",
+  # username: "postgres",
+  # password: "",
   database: "my_blog_test",
   hostname: "localhost",
   pool: Ecto.Adapters.SQL.Sandbox
