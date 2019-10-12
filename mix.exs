@@ -33,15 +33,20 @@ defmodule MyBlog.MixProject do
   # Type `mix help deps` for examples and options.
   defp deps do
     [
+      # gives views & controllers
       {:phoenix, "~> 1.4.10"},
+      # websockets
       {:phoenix_pubsub, "~> 1.1"},
+      # equivalent to ActiveRecord
       {:phoenix_ecto, "~> 4.0"},
+      # because you can use ecto without sql
       {:ecto_sql, "~> 3.1"},
       {:postgrex, ">= 0.0.0"},
       {:phoenix_html, "~> 2.11"},
       {:phoenix_live_reload, "~> 1.2", only: :dev},
       {:gettext, "~> 0.11"},
       {:jason, "~> 1.0"},
+      # equivalent to puma (rack implementing elixir) -- runs server
       {:plug_cowboy, "~> 2.0"}
     ]
   end
